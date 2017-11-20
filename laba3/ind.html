@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password request form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+</head>
+<body>
+		
+	<header>	
+	</header>
+	<div class="form_content">
+		<main>
+			<h1>Password request form</h1>
+
+			<div class="head_info">
+				<p>После загрузки файлов и отправки формы данные, связанные с Вашим аккаунтом Google (имя и фотография), будут записаны.
+				<a href="https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/1mY2cTmD1dd798C1l6e5q28ClvYqAIVybHDLkiMCZNnk/viewform?usp%3Ddrive_web%26edit_requested%3Dtrue&amp;service=wise">Сменить аккаунт</a>
+				</p>
+				<p class="danger">* Обязательно</p>
+			</div>
+			<div class="name">
+				<h3>Please fill your name <span class="DangerStar">*</span></h3>
+				<input type="text" name="UserName" placeholder="Мой ответ" class="input_name">
+			</div>
+
+			<div class="color">
+				<h3>What color you like <span class="DangerStar">*</span> </h3>
+				<form class="Color_select">
+					<input type="radio" name="color"><span>Red</span><br>
+					<input type="radio" name="color"><span>Green</span><br>
+					<input type="radio" name="color"><span>Blue</span><br>
+					<input type="radio" name="color"><span>Black</span><br>
+					<input type="radio" name="color"><span>White</span><br>
+					<input type="radio" name="color"><span>Другое</span><input class="input_other" type="text" name="">
+				</form>
+			</div>
+
+			<div class="town">
+				<h3>What town you like more? <span class="DangerStar">*</span></h3>
+				<form class="form_select">
+					 <select name="Town_select" class="input_town">
+					 	<option value="Choose">Выбрать</option>
+					 	
+						<option value="Minsk">Minsk</option>
+						<option value="Brest">Brest</option>
+						<option value="Gomel">Gomel</option>
+						<option value="Grodno">Grodno</option>
+						<option value="Vitebsk">Vitebsk</option>
+						<option value="Mogilev">Mogilev</option>
+					</select> 
+				</form>
+			</div>
+
+			<div class="programming_languge">
+				<h3>Please describe (at least 50 symbols on symbols) your favorite programming language <span class="DangerStar">*</span></h3>
+				<input type="text" name="answer" class="input_answer" placeholder="Мой ответ">
+			</div>
+
+			<div class="years_education">
+				<h3>What years of education did you really like?<span class="DangerStar">*</span></h3>
+				<form class="YE_select">
+					<input type="checkbox" name="year"><span>First</span><br>
+					<input type="checkbox" name="year"><span>Second</span><br>
+					<input type="checkbox" name="year"><span>Third</span><br>
+					<input type="checkbox" name="year"><span>Fourth</span><br>
+				</form>
+			</div>
+			<div class="send_image">
+				<h3>Please send any image<span class="DangerStar">*</span></h3>
+				<form>
+					<input type="file" name="image" multiple accept="image/*" class="button">
+				</form>
+			</div>
+
+			<div class="set_date">
+				<h3>Set last Monday Monday<span class="DangerStar">*</span></h3>
+				<input type="date" name="date" value="2017-11-13" class="input_date"> 	  <!--не поддерживается во многих браузерах, но на сайте мозиллы нашла решение через select
+				и вот в чём вопрос: без использования бутстрапа и не через селект как делают? скрипт пишут? :( -->
+			</div>
+
+			<form method="post" class = "post_content" >
+				<p><input type="submit" name="submit" value="Отправить" class="button"></p>
+			</form>
+
+		</main>
+	</div>
+	<footer>
+		<h3>Формочка, кривая и косая, зато моя =^^= </h3>
+	</footer>
+
+</body>
+</html>
