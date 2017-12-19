@@ -1,18 +1,18 @@
 var _ = require('lodash');
 
-var names = ['Bruce Wayne', 'Wally West', 'John Jones', 'Kyle Rayner', 'Arthur Curry', 'Clark Kent'];
-var otherNames = ['Barry Allen', 'Hal Jordan', 'Kara Kent', 'Diana Prince', 'Ray Palmer', 'Oliver Queen'];
+var names = ['cat', 'dog', 'frog', 'fox', 'chicken', 'pig'];
+var other = ['Sasha', 'Kirill', 'Nikita', 'mama']
 
-_.each([names, otherNames], function(nameGroup) {
-  findSuperman(nameGroup);
+_.each([names, other], function(nameGroup) {
+  findFoxSay(nameGroup);
 });
 
-function findSuperman(values) {
+function findFoxSay(values) {
   _.find(values, function(name) {
-    if (name === 'Clark Kent') {
-      console.log(name + ': It\'s Superman!');
+    if (name === 'fox'|| name==='Nikita' ) {
+      console.log('What does the '+name+' say???');
     } else {
-      console.log(name + '... No superman!');
+      console.log('I know how the '+name+' say!');
     }
   });
 }
