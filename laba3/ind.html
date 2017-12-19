@@ -21,25 +21,25 @@
 			</div>
 			<div class="name">
 				<h3>Please fill your name <span class="DangerStar">*</span></h3>
-				<input type="text" name="UserName" placeholder="Мой ответ" class="input_name">
+				<input type="text" required name="UserName" placeholder="Мой ответ" class="input_name">
 			</div>
 
 			<div class="color">
 				<h3>What color you like <span class="DangerStar">*</span> </h3>
 				<form class="Color_select">
-					<input type="radio" name="color"><span>Red</span><br>
-					<input type="radio" name="color"><span>Green</span><br>
-					<input type="radio" name="color"><span>Blue</span><br>
-					<input type="radio" name="color"><span>Black</span><br>
-					<input type="radio" name="color"><span>White</span><br>
-					<input type="radio" name="color"><span>Другое</span><input class="input_other" type="text" name="">
+					<input type="radio" required name="color"><span>Red</span><br>
+					<input type="radio" required name="color"><span>Green</span><br>
+					<input type="radio" required name="color"><span>Blue</span><br>
+					<input type="radio" required name="color"><span>Black</span><br>
+					<input type="radio" required name="color"><span>White</span><br>
+					<input type="radio" required name="color"><span>Другое</span><input class="input_other" type="text" name="">
 				</form>
 			</div>
 
 			<div class="town">
 				<h3>What town you like more? <span class="DangerStar">*</span></h3>
 				<form class="form_select">
-					 <select name="Town_select" class="input_town">
+					 <select required name="Town_select" class="input_town">
 					 	<option value="Choose">Выбрать</option>
 					 	
 						<option value="Minsk">Minsk</option>
@@ -54,28 +54,29 @@
 
 			<div class="programming_languge">
 				<h3>Please describe (at least 50 symbols on symbols) your favorite programming language <span class="DangerStar">*</span></h3>
-				<input type="text" name="answer" class="input_answer" placeholder="Мой ответ">
+				<input type="text" required name="answer" class="input_answer" placeholder="Мой ответ">
 			</div>
 
 			<div class="years_education">
 				<h3>What years of education did you really like?<span class="DangerStar">*</span></h3>
 				<form class="YE_select">
-					<input type="checkbox" name="year"><span>First</span><br>
-					<input type="checkbox" name="year"><span>Second</span><br>
-					<input type="checkbox" name="year"><span>Third</span><br>
-					<input type="checkbox" name="year"><span>Fourth</span><br>
+					<input type="checkbox" required name="year"><span>First</span><br>
+					<input type="checkbox" required name="year"><span>Second</span><br>
+					<input type="checkbox" required name="year"><span>Third</span><br>
+					<input type="checkbox" required name="year"><span>Fourth</span><br>
 				</form>
 			</div>
 			<div class="send_image">
 				<h3>Please send any image<span class="DangerStar">*</span></h3>
 				<form>
-					<input type="file" name="image" multiple accept="image/*" class="button">
+					<input type="file" required name="image" multiple accept="image/*" class="button">
 				</form>
 			</div>
 
 			<div class="set_date">
 				<h3>Set last Monday Monday<span class="DangerStar">*</span></h3>
-				<input type="date" name="date" value="2017-11-13" class="input_date"> 	  <!--не поддерживается во многих браузерах, но на сайте мозиллы нашла решение через select
+
+				<input type="date" required name="date" class="input_date"> 	  <!--не поддерживается во многих браузерах, но на сайте мозиллы нашла решение через select
 				и вот в чём вопрос: без использования бутстрапа и не через селект как делают? скрипт пишут? :( -->
 			</div>
 

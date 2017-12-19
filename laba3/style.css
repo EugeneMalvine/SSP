@@ -39,8 +39,11 @@ main{
 
 }
 .button{
-	 background-color:#61A7E5;
-	 color: white;
+	text-decoration: none;
+  	padding: 2%;
+  	border-radius: 3px;
+	background-color:#61A7E5;
+	color: white;
 }
 footer{
 	align-content: center;
