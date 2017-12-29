@@ -1,0 +1,27 @@
+.TabControl{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-start;
+	overflow: hidden;
+	float: right;
+	max-width: 600px;
+}
+
+.TabControl>input {
+	display: none;
+	position: absolute;
+}
+.TabControl>section {
+	text-align: center;
+	padding: 15px;
+	border: 1px solid #104160;
+}
+.TabControl>label {
+	padding: 15px 25px;
+	text-align: center;
+	border: 0px solid #104160;
+	border-width: 1px 1px 1px 1px;
+	background: #C2DEFF;
+    border-radius: 3px 3px 0 0;
+}

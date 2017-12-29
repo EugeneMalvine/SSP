@@ -1,0 +1,41 @@
+.App {
+  font-family: 'FontAwesome';
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.content{
+    padding: 5%;
+}
+
+.User{
+    padding-left: 10px;
+}
+.User-Name{
+  color: #454545;
+}
+.User-info{
+  color: #7D7D7D;
+}
+a{
+    text-decoration: none;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

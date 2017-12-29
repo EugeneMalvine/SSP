@@ -138,6 +138,12 @@ function isTriangle(a,b,c) {
  *  
  */
 function doRectanglesOverlap(rect1, rect2) {
+    if ((rect1.left > (rect2.left + rect2.width)) || (rect2.left > (rect1.left + rect1.width)))
+    return false;
+
+    if ((rect1.top > (rect2.top + rect2.height)) || (rect2.top > (rect1.top + rect1.height)))
+        return false;
+return true;
     throw new Error('Not implemented');
 }
 
@@ -169,6 +175,10 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
+    if (Math.pow(point.x - circle.center.x,2) + Math.pow(point.y - circle.center.y,2) < Math.pow(circle.radius,2))
+        return true;
+    else
+        return false;
     throw new Error('Not implemented');
 }
 
@@ -185,6 +195,14 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
+var rez="";
+for (var i = 0; i < str.length; i++) {
+    rez = str[i];
+    if(str.indexOf(rez)===i&&str.lastIndexOf(rez)===i)
+        return rez;
+}
+return null;
+
     throw new Error('Not implemented');
 }
 
@@ -211,22 +229,23 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-   /* if(isStartIncluded==='true'&& isEndIncluded==='true'){
-        if(a<b) return '['+a+', '+b+']';
-        else return '['+b+', '+a+']';
+
+    if(isStartIncluded===true && isEndIncluded===true){
+        if(a<=b) return '['+a+', '+b+']';
+        if(a>=b) return '['+b+', '+a+']';
     }
-    else if(isStartIncluded==='true'&& isEndIncluded==='false'){
-        if(a<b) return '['+a+', '+b+')';
-        else return '['+b+', '+a+')';
+    else if(isStartIncluded===true && isEndIncluded===false){
+        if(a<=b) return '['+a+', '+b+')';
+        if(a>=b) return '['+b+', '+a+')';
     }
-    else if(isStartIncluded==='false'&& isEndIncluded==='true'){
-        if(a<b) return '('+a+', '+b+']';
-        else return '('+b+', '+a+']';
+    else if(isStartIncluded=== false && isEndIncluded===true){
+        if(a<=b) return '('+a+', '+b+']';
+        if(a>=b) return '('+b+', '+a+']';
     }
-    else if(isStartIncluded==='true'&& isEndIncluded==='false'){
-        if(a<b) return '('+a+', '+b+')';
-        else return '('+b+', '+a+')';
-    }*/
+    else {
+        if(a<=b) return '('+a+', '+b+')';
+        if(a>=b) return '('+b+', '+a+')';
+    }
 
     throw new Error('Not implemented');
 }
@@ -245,9 +264,14 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
+   /* var rez = new String();
+
+for (var i = str.length; i >0; i--) 
+    rez += str[i];
+return rez;*/
     throw new Error('Not implemented');
 }
-
+//undefineddog... - "" '' new String() -? почему строка не пустая
 
 /**
  * Reverse the specified integer number (put all digits in reverse order)
@@ -262,6 +286,12 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
+    var res = 0;
+    while (num > 0) {
+        res = res * 10 + num % 10;
+        num = Math.floor(num / 10);
+    }
+    return res;
     throw new Error('Not implemented');
 }
 
@@ -287,6 +317,16 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
+  var sum=0;
+  ccn = ccn.toString();
+  for(var i = 0; i < ccn.length; i++) {
+    if (ccn.length % 2 !== i % 2)
+        sum += ccn[i] * 1;
+    else
+        sum += ccn[i] * 2 + (ccn[i] > 4 ? -9 : 0);
+  }
+   if(sum % 10 === 0) return true;
+   else return false;
     throw new Error('Not implemented');
 }
 
@@ -306,6 +346,15 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
+  do {
+    var arr = num.toString();
+    num=0;
+      for (var i = 0; i < arr.length; i++) {
+        num += Number.parseInt(arr[i]);
+        }
+    }
+    while(num > 9);
+   return num;
     throw new Error('Not implemented');
 }
 
@@ -332,6 +381,9 @@ function getDigitalRoot(num) {
  *   '{[(<{[]}>)]}' = true 
  */
 function isBracketsBalanced(str) {
+    var open  = ['[', '(', '{', '<'];
+    var close = [']', ')', '}', '>'];
+    
     throw new Error('Not implemented');
 }
 

@@ -1,0 +1,15 @@
+.Foto{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow:hidden;
+	max-height: 350px;
+	max-width: 350px;
+	border: 1px solid white;
+	border-radius: 15px;
+	margin-top: -20px;
+
+}
+.Foto-ava{
+	margin-left: -150px;
+}
